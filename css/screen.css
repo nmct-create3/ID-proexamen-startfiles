@@ -29,7 +29,6 @@
 */
 
 html {
-    font-size: 16px;
     line-height: 1.5;
     font-family: sans-serif;
     color: Black;
@@ -51,12 +50,6 @@ html {
 *
 * Customize the background color to match your design.
 */
-
-::-moz-selection {
-    background: orange;
-    color: white;
-    text-shadow: none;
-}
 
 ::selection {
     background: orange;
@@ -249,7 +242,8 @@ input:disabled {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
+    max-width: 79.5em;
+    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -263,7 +257,7 @@ input:disabled {
     position: relative;
 }
 
-.o-section + .o-section {
+.o-section+.o-section {
     padding-top: 8px;
 }
 
@@ -470,6 +464,7 @@ No media query since this is the default in mobile first design
 */
 
 @media print {
+
     *,
     *:before,
     *:after {
@@ -480,16 +475,20 @@ No media query since this is the default in mobile first design
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
         content: " (" attr(href) ")";
     }
+
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
+
     /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
@@ -498,14 +497,17 @@ No media query since this is the default in mobile first design
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+
     /*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -513,16 +515,19 @@ No media query since this is the default in mobile first design
     thead {
         display: table-header-group;
     }
+
     tr,
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;
